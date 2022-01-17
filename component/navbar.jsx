@@ -1,5 +1,8 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import {Login} from "./login";
+import {Alljob} from "./alljob"
+import {Adminpage} from "./Adminpage"
 
 export const Nav=()=>{
     return(
