@@ -3,14 +3,18 @@ import { createContext,useState } from 'react';
 export const AuthContext = createContext()
 
 export const AuthContextProvider=({children})=>{
-    const [data,setData]=React.useState([]);
- const handleData=(id)=>{
-   setData({...data,id})
+
+    const [auth,setAuth]=useState(false);
+ const handleData=(token)=>{
+     console.log(token)
+     if (token){
+   setAuth(true)
+     }
  } 
 
        
     return (
-        <AuthContext.Provider value={data,handleData} >
+        <AuthContext.Provider value={auth,handleData} >
             {children}
         </AuthContext.Provider>
     )
